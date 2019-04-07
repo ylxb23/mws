@@ -1,0 +1,9 @@
+dependencies {
+	compile library.springBootMyBatis
+	compile library.druid
+	compile library.jdbcConnector
+	compile library.shardingJdbc
+	
+	testCompile library.fastjson
+	testCompile library.springBootTest
+}

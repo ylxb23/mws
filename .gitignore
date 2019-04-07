@@ -1,0 +1,10 @@
+# eclipse
+.settings/
+.project
+.classpath
+
+# gradle
+.gradle/
+dynamic-datasource/build/
+dynamic-datasource/bin/
+dynamic-datasource/.settings/

@@ -1,0 +1,50 @@
+/* ============================================================================
+   Library definitions for project 'learningdubbo'
+   ============================================================================
+   Define here library dependencies and use them inside your build.gradle
+   files in sub projects.
+  
+   Included from: "${rootProject.projectDir}/build.gradle"
+   ============================================================================
+ 
+ */
+ext {
+    dubboSpringBootVersion              = '2.0.0'
+	druidVersion						= '1.1.15'
+	fastjsonVersion                     = '1.2.39'
+	jdbcConnectionVersion				= '8.0.15'
+	mybatisVersion                      = '2.0.0'
+	springBootVersion                   = '2.0.8.RELEASE'
+	zkVersion							= '3.5.4-beta'
+
+
+	library = [
+		druid:							"com.alibaba:druid:${druidVersion}",
+		
+		fastjson:                       "com.alibaba:fastjson:${fastjsonVersion}",
+		/* testing */		
+		junit:							"junit:junit:4.12",
+		
+		/* logging */
+//		slf4j_api:						"org.slf4j:slf4j-api:1.7.10",
+//		slf4j_jdk:						"org.slf4j:slf4j-jdk14:1.7.10",
+
+		/* apache commons */		
+//		commons_lang: 					"org.apache.commons:commons-lang3:3.5",	
+//		commons_io:						"commons-io:commons-io:2.5",
+		
+		jdbcConnector:                  "mysql:mysql-connector-java:${jdbcConnectionVersion}",
+		shardingJdbc:					"io.shardingsphere:sharding-jdbc-core:3.1.0",
+		
+		dubboSpringBoot:                "com.alibaba.spring.boot:dubbo-spring-boot-starter:${dubboSpringBootVersion}",
+		springBoot:                     "org.springframework.boot:spring-boot-starter:${springBootVersion}",
+		springBootMyBatis:              "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}",
+		springBootWeb:                  "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
+		springBootAop:                  "org.springframework.boot:spring-boot-starter-aop:${springBootVersion}",
+		springBootJdbc:                 "org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}",
+		springBootTest:                 "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
+		zookeeper:                      "org.apache.zookeeper:zookeeper:${zkVersion}",
+//		zkclient:                       "com.github.sgroschupf:zkclient:0.1",
+	]
+	
+}
