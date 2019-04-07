@@ -14,13 +14,13 @@ allprojects{
 		/* add maven central */
 		mavenCentral()
 	}
-
+	
 }
 subprojects {
 	apply plugin: 'maven'
 	
-	group = "learningdubbo"
-	version = "0.0.1"
+	group = "com.zero.mws"
+	version = "1.0.0"
 	
 	/* Continous integration part - use build number in version when 'ci.buildNumber' is set*/
 	def buildNr = System.getenv('ci.buildNumber')

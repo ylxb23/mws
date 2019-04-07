@@ -12,6 +12,9 @@ subprojects {
 	/* Setup UTF-8 for compile AND test compilation*/
 	[ compileJava, compileTestJava ]*.options*.encoding = 'UTF-8'
 
+	
+	group = 'com.zero.mws'
+	version = '1.0.0'
 	sourceCompatibility = '1.8'
 		
 	/* Default dependencies for all sub projects. */
