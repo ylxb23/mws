@@ -1,11 +1,11 @@
-package com.zero.mw.test.dal.zero.mapper;
+package com.zero.mw.test.dal.mapper.zero;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.zero.mw.test.dal.zero.entity.AppInfo;
-import com.zero.mw.test.dal.zero.entity.AppInfoExample;
+import com.zero.mw.test.dal.entity.AppInfo;
+import com.zero.mw.test.dal.entity.AppInfoExample;
 
 public interface ZeroAppInfoMapper {
     /**

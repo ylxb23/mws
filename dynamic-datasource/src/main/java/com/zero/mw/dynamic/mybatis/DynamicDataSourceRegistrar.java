@@ -136,7 +136,6 @@ public class DynamicDataSourceRegistrar implements ImportBeanDefinitionRegistrar
 		builder.setScope(BeanDefinition.SCOPE_SINGLETON);
 		builder.addPropertyValue("basePackage", basePackage);
 		builder.addPropertyValue("sqlSessionTemplate", sqlSessionTemplateBeanDefinitionHolder);
-//		builder.addPropertyValue("sqlSessionFactory", sqlSessionFactoryBeanDefinitionHolder);
 		String beanName = dsName + "DynamicMapperScannerConfigurer";
 		if(logger.isDebugEnabled()) {
 			logger.debug("Build MapperScannerConfigurer BeanDefinitionHolder success, dsName:{}, beanName:{}", dsName, beanName);
@@ -218,6 +217,7 @@ public class DynamicDataSourceRegistrar implements ImportBeanDefinitionRegistrar
 		}
 		BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DynamicDataSource.class);
 		builder.setScope(BeanDefinition.SCOPE_SINGLETON);
+		builder.addPropertyValue("dsName", dsName);
 		if(dDsReference != null) {
 			builder.addPropertyValue("defaultDataSource", dDsReference);
 		}
@@ -228,6 +228,7 @@ public class DynamicDataSourceRegistrar implements ImportBeanDefinitionRegistrar
 			builder.addPropertyValue("readDataSource", rDsReference);
 		}
 		builder.addPropertyValue("dataSourceMap", dsReferenceMap);
+		
 		String beanName = dsName + "DynamicDataSource";
 		if(logger.isDebugEnabled()) {
 			logger.debug("Build DynamicDataSource BeanDefinitionHolder success, dsName:{}, beanName:{}", dsName, beanName);
@@ -245,7 +246,6 @@ public class DynamicDataSourceRegistrar implements ImportBeanDefinitionRegistrar
 	 */
 	private BeanDefinitionHolder buildDataSourceBeanDefinitionHolder(String dsName, DsConfiguration dsInfo, DsDruidConfiguration _defaultConf, BeanDefinitionRegistry registry) {
 		try {
-			logger.debug("Create dataSource bean definition holder for {}", dsName);
 			BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DruidDataSource.class);
 			builder.setScope(BeanDefinition.SCOPE_SINGLETON);
 			builder.addPropertyValue("driverClassName", _defaultConf.getDriverClassName());

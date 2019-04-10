@@ -27,6 +27,7 @@ public class DsDruidConfiguration {
     private Integer initialSize = DruidDataSource.DEFAULT_INITIAL_SIZE;
     private Integer maxActive = DruidDataSource.DEFAULT_MAX_ACTIVE_SIZE;
     private Integer minIdle = DruidDataSource.DEFAULT_MIN_IDLE;
+    // deprecated by DruidDataSource
     private Integer maxIdle = DruidDataSource.DEFAULT_MAX_IDLE;
     private Integer maxWait = DruidDataSource.DEFAULT_MAX_WAIT;
     private Integer notFullTimeoutRetryCount = 0;

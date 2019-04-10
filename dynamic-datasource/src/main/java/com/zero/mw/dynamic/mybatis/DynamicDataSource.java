@@ -15,7 +15,7 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 public class DynamicDataSource extends AbstractRoutingDataSource {
 	
 	private final Logger logger = LoggerFactory.getLogger(DynamicDataSource.class);
-	
+	private String dsName;
 	private Object defaultDataSource;
 	private Object writeDataSource;
 	private Object readDataSource;
@@ -50,6 +50,14 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
 		super.afterPropertiesSet();
 	}
 	
+	public String getDsName() {
+		return dsName;
+	}
+
+	public void setDsName(String dsName) {
+		this.dsName = dsName;
+	}
+
 	public Object getDefaultDataSource() {
 		return defaultDataSource;
 	}

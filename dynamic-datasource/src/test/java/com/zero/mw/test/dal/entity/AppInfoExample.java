@@ -1,4 +1,4 @@
-package com.zero.mw.test.dal.sharding0.entity;
+package com.zero.mw.test.dal.entity;
 
 import java.util.ArrayList;
 import java.util.Date;

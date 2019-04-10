@@ -1,4 +1,4 @@
-package com.zero.mw.test.dal.sharding1.entity;
+package com.zero.mw.test.dal.entity;
 
 import java.util.Date;
 

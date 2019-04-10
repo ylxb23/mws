@@ -109,7 +109,9 @@ public final class DynamicPropertyUtil {
 				logger.info("DataSource urls configuration without url configurated, dsName:{}", db);
 			}
 		}
-		logger.debug("mysql env pairs: {} \n dsInfos: {}", pairs, dsInfoMap);
+		if(logger.isDebugEnabled()) {
+			logger.debug("mysql env pairs: {} \n dsInfos: {}", pairs, dsInfoMap);
+		}
 		return dsInfoMap;
 	}
 	
