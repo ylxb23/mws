@@ -1,6 +1,6 @@
 # dynamic-datasource
 
-dynamic-datasource is a dynamicDataSource bean definition registrar, it will auto configure DataSource with Reading and Writing separation. You can use Master database to write and Slave database to read, The configurations like:
+dynamic-datasource is a `DynamicDataSource` bean definition registrar, it will auto configure DataSource with Reading and Writing separation. You can use Master database to write and Slave database to read, The configurations like:
 ```
 ds.mysql.zero.username=root
 ds.mysql.zero.password=xxxxxxxx
@@ -26,7 +26,8 @@ ds.connection.default.driverClassName=com.mysql.cj.jdbc.Driver
 ds.connection.default.initialSize=5
 ds.connection.default.maxActive=8
 ds.connection.default.minIdle=0
-ds.connection.default.maxIdle=8
+# deprecated
+ds.connection.default.maxIdle=8     
 ds.connection.default.maxWait=3000
 ds.connection.default.notFullTimeoutRetryCount=0
 ds.connection.default.validationQuery=null
