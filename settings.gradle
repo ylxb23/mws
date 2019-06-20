@@ -1,4 +1,5 @@
-rootProject.name="com.zero.mws"
+rootProject.name="mws"
 
 include 'dynamic-datasource'
+include 'operator-stream'
 		

@@ -61,6 +61,9 @@ public class DynamicDataSourceRegistrar implements ImportBeanDefinitionRegistrar
 
 			String dsName = dsInfo.getKey();
 			Map<String, DsConfiguration> rwdMap = dsInfo.getValue();
+			if(rwdMap == null || rwdMap.isEmpty()) {
+				continue;
+			}
 			String mapperLocations = null;
 			String basePackage = null;
 			DsConfiguration dDsInfo = rwdMap.get(DynamicConstants.DEFAULT);
